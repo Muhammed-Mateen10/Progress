@@ -1,0 +1,21 @@
+﻿@model List<ProgressWebApplication.Models.Course>
+@{
+     ViewData["Title"] = "Course";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Courses Registered</h1>
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th><h2>Course Code</h2></th>
+        <th><h2>Course Name</h2> </th>
+        <th><h2>Credit Hours</h2></th>
+    </tr>
+    @foreach (var d in Model)
+    {
+        <tr>
+            <td><h3>@d.Code</h3></td>
+            <td><h3>@d.Name</h3></td>
+            <td><h3>@d.CreditHours</h3></td>
+        </tr>
+    }
+</table>
